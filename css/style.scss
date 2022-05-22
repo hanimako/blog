@@ -3,6 +3,12 @@
 // 本文のフォントカラー
 $mainFontColor: #333;
 
+// フォント
+$baseFontSize: 16;
+@function rem($pixels) {
+  @return $pixels / $baseFontSize * 1rem;
+}
+
 // ブレイクポイント
 $breakPoint: 768px;
 // メディアクエリー
@@ -17,7 +23,7 @@ $breakPoint: 768px;
   common
 ---------------------------------------------------- */
 body {
-  font-size: 14px;
+  font-size: rem(14);
   color: $mainFontColor;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans" ,Meiryo, sans-serif;
   line-height: 1.8;
@@ -36,7 +42,7 @@ a {
   padding: 0 16px;
 }
 .section-ttl {
-  font-size: 18px;
+  font-size: rem(18);
 }
 .main__outer {
   display: flex;
@@ -132,11 +138,11 @@ a {
   }
 }
 .main .card__ttl {
-  font-size: 24px;
+  font-size: rem(24);
 }
 .main .card__caption {
   margin-top: 15px;
-  font-size: 12px;
+  font-size: rem(12);
 }
 .main .card__caption > span {
   margin-left: 14px;
@@ -147,7 +153,7 @@ a {
 .main .card__txt {
   margin-top: 10px;
   padding: 0 42px;
-  font-size: 16px;
+  font-size: rem(16);
 }
 .main .card__link {
   margin-top: 30px;
